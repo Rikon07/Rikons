@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaEnvelope, FaBars, FaUser, FaCode, FaProjectDiagram, FaGraduationCap } from "react-icons/fa";
-import ThemeToggle from "../ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 import MobileNav from "./MobileNav";
 
 const PROFILE_PIC = "/public/profile-picture (1).png";
@@ -25,7 +25,7 @@ export default function Navbar() {
 
   // Glassy styles for both modes
   const glassy =
-    "backdrop-blur-2xl  transition-all duration-300";
+    "backdrop-blur-2xl transition-all duration-300";
 
   return (
     <>
@@ -44,7 +44,7 @@ export default function Navbar() {
              flex items-center justify-between
             ${isScrolled
               ? "rounded-full px-6  shadow-lg w-full max-w-3xl"
-              : "rounded-none px-2 py-0 w-full max-w-6xl"}
+              : "rounded-none px-3 md:px-6 lg:px-2 py-0 w-full max-w-6xl"}
             transition-all duration-300
           `}
           style={{
@@ -64,7 +64,7 @@ export default function Navbar() {
               `}
             />
             <span
-              className={`font-bold text-lg transition-all duration-300
+              className={`font-bold text-base md:text-lg transition-all duration-300
                 ${isScrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"}
               `}
               style={{ transitionProperty: "opacity, width" }}
