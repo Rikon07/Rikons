@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@layer base {
+    html {
+        @apply transition-colors duration-300;
+    }
+    body{
+        @apply bg-[#D0E7F9]/30 dark:bg-[#0F172A] dark:text-gray-100;
+    }
+}
+html { scroll-behavior: smooth; }
+
+.jetmono {
+  font-family: "JetBrains Mono", monospace;
+
+}
