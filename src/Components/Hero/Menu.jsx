@@ -44,7 +44,7 @@ export default function Menu() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          whileHover={{ scale: 1.04, boxShadow: "0 8px 32px 0 rgba(59,130,246,0.25)" }}
+          whileHover={{ y:-4 ,scale: 1.03, boxShadow: "0 8px 32px 0 rgba(59,130,246,0.25)" }}
           className="relative w-80 h-96 flex flex-col items-center justify-end cursor-pointer"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
@@ -119,7 +119,7 @@ export default function Menu() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
           >
-            A passionate Competitive Programmer & Web Developer, crafting modern, delightful, and scalable web experiences.
+            A passionate Competitive Programmer & Web Developer; crafting modern, delightful, and scalable web experiences.
           </motion.p>
         </motion.div>
 
