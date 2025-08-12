@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import SocialMediaDock from "./SocialMediaDoc";
+import pp2 from "/public/profile-picture (2).png"
 const floatingTags = [
   { text: "() => {}", className: "text-blue-400", style: { top: "20%", left: "33%" }, delay: 0 },
   { text: "{}", className: "text-indigo-300", style: { top: "50%", left: "10%" }, delay: 0.2 },
@@ -31,7 +32,7 @@ export default function Menu() {
   }
 
   return (
-    <section className="relative jetmono min-h-[90vh] flex flex-col items-center justify-center px-4 pt-8 md:pt-16">
+    <section className="relative jetmono min-h-[90vh] flex flex-col items-center justify-center px-4 pt-12 md:pt-16">
       <div className="w-full max-w-6xl flex flex-col items-center gap-6 mx-auto">
         {/* Profile Card */}
         <motion.div
@@ -45,7 +46,7 @@ export default function Menu() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           whileHover={{ y:-4 ,scale: 1.03, boxShadow: "0 8px 32px 0 rgba(59,130,246,0.25)" }}
-          className="relative w-80 h-96 flex flex-col items-center justify-end cursor-pointer"
+          className="relative w-64 h-76 md:w-72 md:h-86 lg:w-80 lg:h-96 flex flex-col items-center justify-end cursor-pointer"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
@@ -58,9 +59,9 @@ export default function Menu() {
               {/* Blurry Profile Image with Blue Overlay */}
               <div className="absolute inset-0 w-full h-full z-0">
                 <img
-                  src="/public/profile-picture (2).png"
+                  src={pp2}
                   alt="Profile"
-                  className="w-full h-full object-cover rounded-2xl filter blur-[1px] brightness-75"
+                  className="w-full h-full object-cover rounded-2xl filter blur-[0px] brightness-75"
                   draggable={false}
                 />
                 {/* Blue Overlay */}
@@ -89,9 +90,9 @@ export default function Menu() {
               ))}
 
               {/* Name & Profession glassy overlay */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] mt-4 px-4 py-2 rounded-xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md shadow text-center z-10">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white">Rikon</h2>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Web Developer (MERN)</p>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] mt-2 md:mt-4 px-4 py-2 rounded-xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md shadow text-center z-10">
+                <h2 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">Rikon</h2>
+                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">Web Developer (MERN)</p>
               </div>
             </div>
           </motion.div>

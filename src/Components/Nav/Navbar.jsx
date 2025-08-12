@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { FaEnvelope, FaBars, FaUser, FaCode, FaProjectDiagram, FaGraduationCap } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 import MobileNav from "./MobileNav";
-
-const PROFILE_PIC = "/public/profile-picture (1).png";
+import nikli from '/public/nikli.jpg'
+const PROFILE_PIC = nikli;
 const NAME = "Mahedi Rikon";
 
 const navItems = [
   { name: "About", link: "/about", icon: FaUser },
-  { name: "Skills", link: "/#skills", icon: FaCode },
+  { name: "Skills", link: "/skills", icon: FaCode },
   { name: "Projects", link: "/projects", icon: FaProjectDiagram },
   { name: "Education", link: "/education", icon: FaGraduationCap },
 ];
@@ -18,7 +18,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 30);
+    const onScroll = () => setIsScrolled(window.scrollY > 0);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);

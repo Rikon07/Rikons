@@ -68,7 +68,7 @@ const ThemeToggle = () => {
         place="bottom"
         effect="solid"
         delayShow={200}
-        className="!bg-[#38BDF8] !text-[#0F172A] !rounded-lg !px-2 !py-1 text-xs"
+        className="!bg-[#38BDF8]/50 !text-[#0F172A] !rounded-lg !px-2 !py-1 text-xs"
       />
     </>
   );
