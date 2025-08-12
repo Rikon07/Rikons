@@ -20,21 +20,18 @@ const Root = () => {
 
 
       {/* Dark Mode Background */}
-      <div
-        className="absolute inset-0 z-0 hidden dark:block pointer-events-none"
-        style={{
-          backgroundColor: '#101014',
-          backgroundImage: `
-            repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 40px),
-            repeating-linear-gradient(45deg, rgba(0,255,128,0.09) 0, rgba(0,255,128,0.09) 1px, transparent 1px, transparent 20px),
-            repeating-linear-gradient(-45deg, rgba(255,0,128,0.10) 0, rgba(255,0,128,0.10) 1px, transparent 1px, transparent 30px),
-            repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px),
-            radial-gradient(circle at 60% 40%, rgba(0,255,128,0.05) 0, transparent 60%)
-          `,
-          backgroundSize: "80px 80px, 40px 40px, 60px 60px, 80px 80px, 100% 100%",
-          backgroundPosition: "0 0, 0 0, 0 0, 40px 40px, center",
-        }}
-      />
+  <div
+    className="absolute inset-0 z-0 hidden dark:block pointer-events-none"
+    style={{
+      background: "#020617",
+      backgroundImage: `
+        linear-gradient(to right, rgba(71,85,105,0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(71,85,105,0.3) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(139,92,246,0.15) 0%, transparent 70%)
+      `,
+      backgroundSize: "32px 32px, 32px 32px, 100% 100%",
+    }}
+  />
 
       {/* Page Content */}
       <div className="relative z-10">

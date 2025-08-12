@@ -32,9 +32,10 @@ export default function Navbar() {
       <nav
         className={` jetmono
           fixed top-0 left-0 w-full z-50 flex flex-col items-center
-          ${isScrolled ? "py-2 bg-transparent" : "pt-4"}
+          ${isScrolled ? "py-2 bg-transparent " : "pt-4 bg-transparent"}
           ${glassy}
         `}
+        
         // style={{
         //   borderBottom: isScrolled ? "none" : "1px solid #cbd5e1",
         // }}
@@ -43,7 +44,7 @@ export default function Navbar() {
           className={`
              flex items-center justify-between
             ${isScrolled
-              ? "rounded-full px-6  shadow-lg w-full max-w-3xl"
+              ? "rounded-full px-6  shadow-lg w-full max-w-3xl bg-violet-50 dark:bg-violet-950/25"
               : "rounded-none px-3 md:px-6 lg:px-2 py-0 w-full max-w-6xl"}
             transition-all duration-300
           `}
