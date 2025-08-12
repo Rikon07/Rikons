@@ -2,11 +2,11 @@ import { useRef } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import SocialMediaDock from "./SocialMediaDoc";
 const floatingTags = [
-  { text: "</>", className: "text-blue-400", style: { top: "18%", left: "12%" }, delay: 0 },
-  { text: "{}", className: "text-cyan-400", style: { top: "60%", left: "18%" }, delay: 0.2 },
-  { text: "()", className: "text-indigo-400", style: { top: "35%", right: "14%" }, delay: 0.4 },
-  { text: "<JS/>", className: "text-sky-400", style: { bottom: "18%", left: "30%" }, delay: 0.6 },
-  { text: "<R/>", className: "text-blue-300", style: { bottom: "22%", right: "18%" }, delay: 0.8 },
+  { text: "() => {}", className: "text-blue-400", style: { top: "20%", left: "33%" }, delay: 0 },
+  { text: "{}", className: "text-indigo-300", style: { top: "50%", left: "10%" }, delay: 0.2 },
+  { text: "()", className: "text-cyan-400", style: { top: "35%", right: "10%" }, delay: 0.4 },
+  { text: "</>", className: "text-sky-400", style: { bottom: "7%", left: "42%" }, delay: 0.6 },
+  // { text: "</>", className: "text-blue-300", style: { bottom: "22%", right: "18%" }, delay: 0.8 },
 ];
 
 export default function Menu() {
@@ -31,8 +31,8 @@ export default function Menu() {
   }
 
   return (
-    <section className="relative jetmono min-h-[90vh] flex flex-col items-center justify-center px-4 pt-28">
-      <div className="w-full max-w-6xl flex flex-col items-center gap-12 mx-auto">
+    <section className="relative jetmono min-h-[90vh] flex flex-col items-center justify-center px-4 pt-8 md:pt-16">
+      <div className="w-full max-w-6xl flex flex-col items-center gap-6 mx-auto">
         {/* Profile Card */}
         <motion.div
           ref={cardRef}
@@ -110,16 +110,16 @@ export default function Menu() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-500 via-sky-400 to-indigo-400 bg-clip-text text-transparent"
           >
-            Hey, I’m Mahedi Rikon
+            <span className="text-2xl md:text-3xl lg:text-4xl">Hey, I’m</span><br/> Md. Mahedi Hasan
           </motion.h1>
 
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-xl mx-auto"
+            className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
           >
-            A passionate Software Engineer crafting modern, delightful, and scalable web experiences.
+            A passionate Competitive Programmer & Web Developer, crafting modern, delightful, and scalable web experiences.
           </motion.p>
         </motion.div>
 

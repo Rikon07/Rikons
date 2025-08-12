@@ -1,8 +1,11 @@
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 import { useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useRef } from "react";
+import { Tooltip } from "react-tooltip";
+import { SiCodeforces } from "react-icons/si";
 
-function DockIcon({ mouseX, href, children, label }) {
+function DockIcon({ mouseX, href, children, label, download }) {
   const ref = useRef(null);
   const defaultMouseX = useMotionValue(Infinity);
   const iconSize = 40;
@@ -22,10 +25,29 @@ function DockIcon({ mouseX, href, children, label }) {
       rel="noopener noreferrer"
       aria-label={label}
       ref={ref}
-      className="flex aspect-square items-center justify-center rounded-2xl bg-white/90 dark:bg-gray-800/90 shadow-lg hover:shadow-xl transition-shadow backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
-      style={{ width: width.get() }}
+      download={download}
+      data-tooltip-id={`dock-tooltip-${label}`}
+      data-tooltip-content={label}
+      className="flex aspect-square items-center justify-center rounded-2xl bg-white/90 dark:bg-gray-800/90 shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-md border border-gray-200/50 dark:border-gray-700/50 group"
+      style={{ width: width.get(), minWidth: 40, minHeight: 40, position: "relative" }}
     >
-      {children}
+      <motion.div
+        whileHover={{
+          scale: 1.15,
+          boxShadow: "0 0 24px 4px #38BDF8, 0 0 0 2px #38BDF8",
+          background: "rgba(56,189,248,0.08)",
+        }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="w-full h-full flex items-center justify-center rounded-2xl"
+      >
+        {children}
+      </motion.div>
+      <Tooltip
+        id={`dock-tooltip-${label}`}
+        place="top"
+        effect="solid"
+        className="!bg-[#38BDF8]/20 !text-[#0F172A] !rounded-lg !px-4 !py-2 !font-semibold"
+      />
     </a>
   );
 }
@@ -53,10 +75,26 @@ export default function SocialMediaDock() {
       href: "https://www.linkedin.com/in/rikon07/",
       icon: <FaLinkedin className="h-full w-full p-2.5 text-blue-700" />,
     },
+    {
+      name: "Codeforces",
+      href: "https://codeforces.com/profile/Rik_on",
+      icon: <SiCodeforces className="h-full w-full p-2.5 text-orange-500" />,
+    },
+    {
+      name: "Resume",
+      href: "/Rik_Shelby_Resume.pdf", // Place your resume in public folder
+      icon: <FaDownload className="h-full w-full p-2.5 text-[#38BDF8]" />,
+      download: true,
+    },
   ];
 
   return (
-    <div className="flex flex-col items-center justify-end p-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, type: "spring" }}
+      className="flex flex-col items-center justify-end"
+    >
       <div
         onMouseMove={e => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
@@ -66,11 +104,17 @@ export default function SocialMediaDock() {
         }}
       >
         {icons.map(icon => (
-          <DockIcon key={icon.name} href={icon.href} mouseX={mouseX} label={icon.name}>
+          <DockIcon
+            key={icon.name}
+            href={icon.href}
+            mouseX={mouseX}
+            label={icon.name}
+            download={icon.download}
+          >
             {icon.icon}
           </DockIcon>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
