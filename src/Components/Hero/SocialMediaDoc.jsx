@@ -93,7 +93,7 @@ export default function SocialMediaDock() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, type: "spring" }}
-      className="flex flex-col items-center justify-end"
+      className="flex flex-col mb-6 md:mb-8 lg:mb-10 items-center justify-end"
     >
       <div
         onMouseMove={e => mouseX.set(e.pageX)}

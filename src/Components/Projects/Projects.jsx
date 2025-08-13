@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-
+import { useNavigate } from "react-router";
+import  projects  from "./projects";
 const techIcons = {
   React: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   Tailwind: "https://www.svgrepo.com/show/374118/tailwind.svg",
@@ -18,32 +19,6 @@ const techIcons = {
   Aos: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
 };
 
-const projects = [
-  {
-    name: "The DailyCommit",
-    image: "https://i.ibb.co.com/bMBYqW82/The-Daily-Commit-Banner.png",
-    live: "https://the-daily-commit-c5e84.web.app/",
-    github: "https://github.com/Rikon07/The-DailyCommit",
-    stack: ["React", "Tailwind", "Javascript", "Firebase", "Vercel", "Motion", "Mongo", "Express", "Nodejs", "Tanstack", "JWT", "Stripe"],
-    description: "A modern, fullstack Computer Science news platform for developers, by developers.",
-  },
-  {
-    name: "BooKitsu",
-    image: "https://i.ibb.co.com/1Jp34ryC/Boo-Kitsu-Banner-Dark.png",
-    live: "https://bookitsu-library-007.web.app/",
-    github: "https://github.com/Rikon07/BooKitsu",
-    stack: ["React", "Tailwind", "Javascript", "Firebase", "Vercel", "Mongo", "Express", "Nodejs", "JWT"],
-    description: "BooKitsu is a beautifully crafted frontend for a modern school library management system.",
-  },
-  {
-    name: "RykHub",
-    image: "https://i.ibb.co.com/YTZpPB8y/Ryk-Hub-Banner-dark.png",
-    live: "https://rykhub-007.web.app/",
-    github: "https://github.com/Rikon07/RykHub",
-    stack: ["React", "Tailwind", "Javascript", "Firebase", "Vercel", "Aos", "Mongo", "Express", "Nodejs"],
-    description: "RykHub is a full-stack freelance task marketplace web app where users can post, bid on, and manage tasks.",
-  },
-];
 
 const cardVariants = {
   hidden: { opacity: 0, y: 60 },
@@ -55,12 +30,13 @@ const cardVariants = {
 };
 
 export default function Projects() {
-  const [selected, setSelected] = useState(null);
-
+  
+  // const [selected, setSelected] = useState(null);
+ const navigate = useNavigate();
   return (
     <section id="projects" className="w-full jetmono max-w-6xl mx-auto py-6 px-4">
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100 jetmono"
+        className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100 jetmono"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -134,11 +110,11 @@ export default function Projects() {
                 </div>
                 <div className="flex gap-4 mt-2">
                   <button
-                    onClick={() => setSelected(project)}
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-sky-400 text-white font-semibold hover:scale-105 transition text-sm md:text-base" 
-                  >
-                    Details
-                  </button>
+  onClick={() => navigate(`/projects/${project.id}`)}
+  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-sky-400 text-white font-semibold hover:scale-105 transition text-sm md:text-base"
+>
+  Details
+</button>
                   <a
                     href={project.github}
                     target="_blank"

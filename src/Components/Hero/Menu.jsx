@@ -32,7 +32,7 @@ export default function Menu() {
   }
 
   return (
-    <section className="relative jetmono min-h-[90vh] flex flex-col items-center justify-center px-4 pt-12 md:pt-16">
+    <section className="relative jetmono min-h-[90vh] flex flex-col items-center justify-center px-4 pt-22 md:pt-24">
       <div className="w-full max-w-6xl flex flex-col items-center gap-6 mx-auto">
         {/* Profile Card */}
         <motion.div
@@ -46,7 +46,7 @@ export default function Menu() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           whileHover={{ y:-4 ,scale: 1.03, boxShadow: "0 8px 32px 0 rgba(59,130,246,0.25)" }}
-          className="relative w-64 h-76 md:w-72 md:h-86 lg:w-80 lg:h-96 flex flex-col items-center justify-end cursor-pointer"
+          className="relative w-60 h-72 md:w-72 md:h-86 lg:w-80 lg:h-96 flex flex-col items-center justify-end cursor-pointer"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
@@ -111,14 +111,14 @@ export default function Menu() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-500 via-sky-400 to-indigo-400 bg-clip-text text-transparent"
           >
-            <span className="text-2xl md:text-3xl lg:text-4xl">Hey, I’m</span><br/> Md. Mahedi Hasan
+            <span className="text-xl md:text-3xl lg:text-4xl">Hey, I’m</span><br/> Md. Mahedi Hasan
           </motion.h1>
 
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+            className="mt-4 text-base md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
           >
             A passionate Competitive Programmer & Web Developer; crafting modern, delightful, and scalable web experiences.
           </motion.p>
