@@ -3,6 +3,8 @@ import Menu from '../Components/Hero/Menu';
 import Skills from '../Components/Skills';
 import About from '../Components/About';
 import Projects from '../Components/Projects/Projects';
+import Education from '../Components/Education';
+import ContactMe from '../Components/Contact';
 const Home = () => {
     return (
         <>
@@ -11,6 +13,8 @@ const Home = () => {
                 <About />
                 <Skills />
                 <Projects />
+                <Education />
+                <ContactMe />
             </div>
         </>
         

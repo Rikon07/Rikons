@@ -13,7 +13,7 @@
     ],
     live: "https://the-daily-commit-c5e84.web.app/",
     github: "https://github.com/Rikon07/The-DailyCommit",
-    stack: ["React", "Tailwind", "Javascript", "Firebase", "Vercel", "Motion", "Mongo", "Express", "Nodejs", "Tanstack", "JWT", "Stripe"],
+    stack: ["React", "Tailwind", "Javascript", "Firebase", "Vercel", "ReactRouter", "Motion", "Mongo", "Express", "Nodejs", "Tanstack", "JWT", "Stripe"],
     description: "A modern, fullstack Computer Science news platform for developers, by developers.",
   },
   {
@@ -25,7 +25,7 @@
     ],
     live: "https://bookitsu-library-007.web.app/",
     github: "https://github.com/Rikon07/BooKitsu",
-    stack: ["React", "Tailwind", "Javascript", "Firebase", "Vercel", "Mongo", "Express", "Nodejs", "JWT"],
+    stack: ["React", "Tailwind", "Javascript", "Firebase", "ReactRouter", "Vercel", "Mongo", "Express", "Nodejs", "JWT"],
     description: "BooKitsu is a beautifully crafted frontend for a modern school library management system.",
   },
   {
@@ -38,7 +38,7 @@
     ],
     live: "https://rykhub-007.web.app/",
     github: "https://github.com/Rikon07/RykHub",
-    stack: ["React", "Tailwind", "Javascript", "Firebase", "Vercel", "Aos", "Mongo", "Express", "Nodejs"],
+    stack: ["React", "Tailwind", "Javascript", "Firebase", "ReactRouter", "Vercel", "Aos", "Mongo", "Express", "Nodejs"],
     description: "RykHub is a full-stack freelance task marketplace web app where users can post, bid on, and manage tasks.",
   },
 ];

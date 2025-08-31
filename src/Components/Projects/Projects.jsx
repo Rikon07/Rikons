@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { useNavigate } from "react-router";
-import  projects  from "./projects";
+import  projects  from "./recentprojects";
 const techIcons = {
   React: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   Tailwind: "https://www.svgrepo.com/show/374118/tailwind.svg",
@@ -17,6 +17,7 @@ const techIcons = {
   JWT: "https://cdn.simpleicons.org/jsonwebtokens/000000",
   Stripe: "https://cdn.iconscout.com/icon/free/png-256/free-stripe-2-498440.png?f=webp",
   Aos: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  ReactRouter: 'https://images.seeklogo.com/logo-png/29/3/react-router-logo-png_seeklogo-294311.png'
 };
 
 

@@ -34,7 +34,7 @@ function DockIcon({ mouseX, href, children, label, download }) {
       <motion.div
         whileHover={{
           scale: 1.15,
-          boxShadow: "0 0 24px 4px #38BDF8, 0 0 0 2px #38BDF8",
+          boxShadow: "0 0 24px 4px #38BDF8, 0 0 0 1px #38BDF8",
           background: "rgba(56,189,248,0.08)",
         }}
         transition={{ type: "spring", stiffness: 300 }}
@@ -44,9 +44,9 @@ function DockIcon({ mouseX, href, children, label, download }) {
       </motion.div>
       <Tooltip
         id={`dock-tooltip-${label}`}
-        place="top"
+        place="bottom"
         effect="solid"
-        className="!bg-[#38BDF8]/20 !text-[#0F172A] !rounded-lg !px-4 !py-2 !font-semibold"
+        className="!bg-[#38BDF8]/50 !text-[#0F172A] !rounded-lg !px-4 !py-2 !font-semibold"
       />
     </a>
   );
@@ -78,11 +78,11 @@ export default function SocialMediaDock() {
     {
       name: "Codeforces",
       href: "https://codeforces.com/profile/Rik_on",
-      icon: <SiCodeforces className="h-full w-full p-2.5 text-orange-500" />,
+      icon: <SiCodeforces className="h-full w-full p-2.5 text-red-500" />,
     },
     {
       name: "Resume",
-      href: "/Rik_Shelby_Resume.pdf", // Place your resume in public folder
+      href: "https://drive.google.com/file/d/10ovUVYWQhW9bj7sHvgnqmRyXr6Ax1s_0/view", // Place your resume in public folder
       icon: <FaDownload className="h-full w-full p-2.5 text-[#38BDF8]" />,
       download: true,
     },

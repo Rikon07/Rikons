@@ -4,21 +4,24 @@ import { motion } from "framer-motion";
 const row1 = [
   { name: "C", color: "#00599C", icon: "https://icon.icepanel.io/Technology/svg/C.svg" },
   { name: "C++", color: "#00599C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+];
+const row2 = [
   { name: "HTML5", color: "#e34c26", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS3", color: "#1572b6", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
   { name: "JavaScript", color: "#f7df1e", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
   { name: "Tailwind", color: "#38bdf8", icon: "https://www.svgrepo.com/show/374118/tailwind.svg" },
   { name: "React", color: "#61dafb", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-];
-
-const row2 = [
-  { name: "MongoDB", color: "#47A248", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-  { name: "Node.js", color: "#3c873a", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "Express", color: "#000000", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",  },
-  { name: "JWT", color: "#000000", icon: "https://cdn.simpleicons.org/jsonwebtokens/000000" },
+  {name: "Motion", color: '#FFC0CB', icon: 'https://images.seeklogo.com/logo-png/44/2/framer-motion-logo-png_seeklogo-446185.png'}
 ];
 
 const row3 = [
+  { name: "MongoDB", color: "#47A248", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "Node.js", color: "#3c873a", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Express", color: "#000000", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",  },
+  { name: "JWT", color: "#4B0082", icon: "https://cdn.simpleicons.org/jsonwebtokens/000000" },
+];
+
+const row4 = [
   { name: "Git", color: "#f05032", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
   { name: "VS Studio", color: "#31A8FF", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" },
   { name: "CodeBlocks", color: "#F8DC3D", icon: "https://images.icon-icons.com/1508/PNG/512/codeblocks_104542.png" },
@@ -54,7 +57,7 @@ function SkillIcon({ icon, name, color }) {
         <img
           src={icon}
           alt={name}
-          className="w-8 h-8 md:w-10 md:h-10 lg:w-14 lg:h-14 filter grayscale brightness-75 group-hover:filter-none transition-all duration-300"
+          className="w-8 h-8 md:w-10 md:h-10 lg:w-14 lg:h-14 filter md:grayscale md:brightness-75 group-hover:filter-none transition-all duration-300"
           style={{
             // filter: invert
             //   ? "invert(1) grayscale(0) brightness(0.75)"
@@ -94,7 +97,7 @@ export default function SkillsSection() {
   return (
     <motion.section
       id="skills"
-      className="w-full max-w-6xl mx-auto jetmono py-12 px-4"
+      className="w-full max-w-7xl mx-auto jetmono py-12 px-4"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -123,6 +126,7 @@ export default function SkillsSection() {
             {renderRow(row1, 1)}
             {renderRow(row2, 2)}
             {renderRow(row3, 3)}
+            {renderRow(row4, 4)}
           </div>
         </div>
         <span className="text-gray-800 dark:text-white">{"}"}</span>

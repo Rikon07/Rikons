@@ -1,7 +1,7 @@
 // src/Pages/ProjectDetails.jsx
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import  projects  from "../Components/Projects/projects";
+import  projects  from "../Components/Projects/recentprojects";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 

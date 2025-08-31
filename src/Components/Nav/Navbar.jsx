@@ -3,6 +3,7 @@ import { FaEnvelope, FaBars, FaUser, FaCode, FaProjectDiagram, FaGraduationCap }
 import ThemeToggle from "./ThemeToggle";
 import MobileNav from "./MobileNav";
 import nikli from '/public/nikli.jpg'
+import { Link } from "react-router";
 const PROFILE_PIC = nikli;
 const NAME = "Mahedi Rikon";
 
@@ -55,15 +56,21 @@ export default function Navbar() {
           }}
         >
           {/* Left: Profile */}
-          <div className="flex items-center gap-2">
-            <img
+          <div
+          onClick={e => {
+                    e.preventDefault();
+                    document.getElementById('menu')?.scrollIntoView({ behavior: "smooth" });
+                  }}
+          className="flex items-center gap-2">
+            <Link to='/'> 
+            <img 
               src={PROFILE_PIC}
               alt="Profile"
-              className={`rounded-full object-cover border-2 dark:border-white border-[#18181b] shadow
+              className={`cursor-pointer rounded-full object-cover border-2 dark:border-white border-[#18181b] shadow
                 ${isScrolled ? "w-8 h-8" : "w-9 h-9"}
                 transition-all duration-300
               `}
-            />
+            /></Link>
             <span
               className={`font-bold text-base md:text-lg transition-all duration-300
                 ${isScrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"}

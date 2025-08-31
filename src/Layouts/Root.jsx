@@ -1,11 +1,15 @@
 import React from 'react';
 import { Outlet } from 'react-router';
 import Navbar from '../Components/Nav/Navbar';
+import Footer from '../Components/Footer';
+import BackToTopButton from '../Components/BackToTop';
 
 const Root = () => {
   return (
     <div className="min-h-screen w-full relative text-gray-900 dark:text-white transition-colors duration-300">
         <Navbar />
+        <BackToTopButton/>
+
       {/* Light Mode Background */}
       <div
       className="absolute inset-0 z-0 pointer-events-none"
@@ -37,6 +41,7 @@ const Root = () => {
       <div className="relative z-10">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 };
